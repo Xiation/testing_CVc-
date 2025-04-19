@@ -1,0 +1,3 @@
+/home/abyan/Documents/testing_CVc++/ALTAIR_vision/field_detection/build/CMakeFiles/field_det.dir
+/home/abyan/Documents/testing_CVc++/ALTAIR_vision/field_detection/build/CMakeFiles/edit_cache.dir
+/home/abyan/Documents/testing_CVc++/ALTAIR_vision/field_detection/build/CMakeFiles/rebuild_cache.dir

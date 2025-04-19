@@ -1,0 +1,39 @@
+{
+    "version": 2,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 19,
+      "patch": 0
+    },
+    "configurePresets": [
+      {
+        "name": "default",
+        "displayName": "Default Config with Contrib",
+        "description": "Build configuration with OpenCV contrib modules",
+        "generator": "Unix Makefiles",
+        "binaryDir": "${sourceDir}/build",
+        "cacheVariables": {
+          "OPENCV_EXTRA_MODULES_PATH": "/home/abyan/opencv/contrib/opencv_contrib-4.x/modules",
+          "CMAKE_BUILD_TYPE": "Release"
+          
+
+        }
+      }
+    ],
+    "buildPresets": [
+      {
+        "name": "default",
+        "configurePreset": "default",
+        "jobs": 4
+      }
+    ],
+    "testPresets": [
+      {
+        "name": "default",
+        "configurePreset": "default",
+        "execution": {
+          "stopOnError": true
+        }
+      }
+    ]
+  }
