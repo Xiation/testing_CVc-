@@ -176,7 +176,7 @@ cv::Mat detect(const cv::Mat &mask_ball, const cv::Mat &mask_field, cv::Mat fram
             // Get a horizontal slice (row) from mask_ball with proper range
             cv::Rect hRect(line_x_start, line_y, line_x_end - line_x_start, 1);
             if (hRect.width <= 0) {
-                )tinue;
+                continue;
             }
             cv::Mat orange_hline = mask_ball(hRect).clone();
             // Reshape to 1 row for processing
@@ -384,10 +384,7 @@ int main() {
         cv::Mat mask_field = fieldResult.second;
         cv::Mat mask_ball = ball(seg_field);
         cv::Mat final_frame = detect(mask_ball, mask_field, frame, distanceHistory, movingAverageWindow);
-        auto message = std_msgs::msg::String();
-        message.data = "Hello, world! " + std::to_string(count_++);
-        RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
-        publisher_->publish(message);
+        
         if (!final_frame.empty()) {
             
             // Overlay FPS on the frame
