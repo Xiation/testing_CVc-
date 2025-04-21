@@ -62,4 +62,4 @@ COPY . .
 #     make -j$(nproc)
 
 # CMD
-CMD ["bash"]
+CMD ["tail", "-f", "/dev/null"]

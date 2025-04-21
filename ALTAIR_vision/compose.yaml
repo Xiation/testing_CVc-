@@ -8,4 +8,7 @@ services:
       - DISPLAY=$DISPLAY
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./ball_detection:/altair-vision/src/ball_detection
+      - ./field_detection:/altair-vision/src/field_detection
+      - ./samplesIMG:/altair-vision/src/samplesIMG
     network_mode: host
